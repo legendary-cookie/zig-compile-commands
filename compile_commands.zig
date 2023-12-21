@@ -175,6 +175,9 @@ fn getCSources(b: *std.Build, steps: []const *std.Build.CompileStep) []*CSourceF
 
                     res.append(source_files) catch @panic("OOM");
                 },
+                else => {
+                    continue;
+                },
             }
         }
         index += 1;
